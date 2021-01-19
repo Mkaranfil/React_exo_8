@@ -16,14 +16,31 @@ class App extends Component{
 
   }
 
+  nombre =(e)=>{
+
+    console.log(this.state.nombre);
+  }
+
+  state={
+    nombre: 1,
+    musique: `rap`,
+  };
+
+ 
+
 	render(){
+
+    // console.log(this.state.nombre);
+    // console.log(this.state.musique);
+    
 		return(
 			<div className="App">
 
-			  <h1>Exercice 8 </h1>
+			  <h1 onMouseOver={this.nombre}>Exercice 8 </h1>
         <button onClick={this.bonjour}>Bonjour</button>
         <button onMouseOver={this.passeDessu}>passse dessus</button>
         <button onDoubleClick={this.dblclick}>double click</button>
+        
 
 			</div>
 		)
